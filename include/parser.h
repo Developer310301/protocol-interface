@@ -9,12 +9,8 @@ namespace protocol_interface::parser{
     using Session = protocol_interface::session::Session;
 
     template<typename Msg>
-    struct ReadParser{
+    struct Parser{
         virtual void readStream(Session* session, Msg* msg) = 0;
-    };
-
-    template<typename Msg>
-    struct WriteParser{
         virtual void writeStream(Session* session, Msg *msg) = 0;
     };
     
